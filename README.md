@@ -1,2 +1,3 @@
 # TierraBytes.github.io
-Our tierrabytes homepage
+Our TierraBytes website homepage.
+
