@@ -15,17 +15,17 @@
 /*
 /* =================================================================== */
 
-/* 
+/*
 /* 01. =webfonts and iconfonts
 /* =================================================================== */
 @import url("fonts.css");
 @import url("font-awesome/css/font-awesome.min.css");
 
-/* 
+/*
 /* 02. =document setup
 /* =================================================================== */
 
-/* Body 
+/* Body
 ---------------------------------------------------------------------- */
 html,
 body {
@@ -45,7 +45,7 @@ body {
 	color: #575859;
 }
 
-/* links 
+/* links
 ---------------------------------------------------------------------- */
 a,
 a:visited {
@@ -246,7 +246,7 @@ hr {
 	height: 0;
 }
 
-/* Lists  
+/* Lists
 --------------------------------------------------------------------- */
 ul,
 ol {
@@ -272,7 +272,7 @@ dd {
 	margin: 0 0 0 20px;
 }
 
-/* Floated image  
+/* Floated image
 --------------------------------------------------------------------- */
 img.pull-right {
 	margin: 12px 0px 0px 18px;
@@ -282,7 +282,7 @@ img.pull-left {
 	margin: 12px 18px 0px 0px;
 }
 
-/* Style Placeholder Text  
+/* Style Placeholder Text
 --------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
 	color: black;
@@ -308,7 +308,7 @@ img.pull-left {
 	color: black !important;
 }
 
-/* 
+/*
 /* 03. =preloader
 /* =================================================================== */
 #preloader {
@@ -378,7 +378,7 @@ img.pull-left {
 
 }
 
-/* 
+/*
 /* 04. forms
 /* =================================================================== */
 form {
@@ -452,7 +452,7 @@ input[type="checkbox"] {
 	display: inline;
 }
 
-/* 
+/*
 /* 05. =content styles
 /* =================================================================== */
 .browserupgrade {
@@ -637,7 +637,7 @@ main .site-header .logo a {
 
 }
 
-/* counter 
+/* counter
 ------------------------------------------ */
 #counter {
 	width: 90%;
@@ -950,7 +950,7 @@ main .site-header .logo a {
 
 }
 
-/* 
+/*
 /* 06. =modals
 /* =================================================================== */
 #mod-about,
@@ -1163,7 +1163,7 @@ main .site-header .logo a {
 		margin-top: 10%;
 	}
 
-	.about-header h1 {
+	.about-header  {
 		font: 32px/1.2em "montserrat-bold", sans-serif;
 	}
 
@@ -1429,7 +1429,7 @@ main .site-header .logo a {
 	color: #fbca08;
 }
 
-/* 
+/*
 /* 07. =footer
 /* =================================================================== */
 footer {
@@ -1455,7 +1455,7 @@ footer a:focus {
 	color: #fff;
 }
 
-/* copyright 
+/* copyright
 ------------------------------------------ */
 .footer-copyright {
 	margin: 0;
@@ -1550,4 +1550,3 @@ footer a:focus {
 	}
 
 }
-

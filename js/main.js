@@ -2,35 +2,35 @@
 /*
 /* Main JS
 /*
------------------------------------------------------------------------------------*/  
+-----------------------------------------------------------------------------------*/
 
 (function($) {
 
    /*---------------------------------------------------- */
 	/* Preloader
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
    $(window).load(function() {
 
-      // will first fade out the loading animation 
+      // will first fade out the loading animation
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
-      });     
+      });
 
   	})
 
    /*---------------------------------------------------- */
 	/* Final Countdown Settings
 	------------------------------------------------------ */
-	var finalDate = '2017/01/01';
+	var finalDate = '2015/11/26';
 
 	$('div#counter').countdown(finalDate)
    	.on('update.countdown', function(event) {
 
-   		$(this).html(event.strftime('<span>%D <em>days</em></span>' + 
-   										 	 '<span>%H <em>hours</em></span>' + 
+   		$(this).html(event.strftime('<span>%D <em>days</em></span>' +
+   										 	 '<span>%H <em>hours</em></span>' +
    										 	 '<span>%M <em>minutes</em></span>' +
    										 	 '<span>%S <em>seconds</em></span>'));
 
@@ -38,39 +38,39 @@
 
    /*----------------------------------------------------*/
 	/*  Placeholder Plugin Settings
-	------------------------------------------------------ */  	 
-	$('input').placeholder() 
-	
+	------------------------------------------------------ */
+	$('input').placeholder()
+
 
    /*----------------------------------------------------- */
    /* Modals
-   ------------------------------------------------------- */   
+   ------------------------------------------------------- */
    $('.modal-toggles ul').on('click', 'a', function(e) {
 
    	var html = $('html'),
    		 main = $('main, footer'),
-   		 footer = $('footer'),           
-          curMod = $(this).attr('href'),  
+   		 footer = $('footer'),
+          curMod = $(this).attr('href'),
           modal = $(curMod),
-          modClose = modal.find('#modal-close');          
-         
+          modClose = modal.find('#modal-close');
+
 		main.fadeOut(500, function(){
 			$('html,body').scrollTop(0);
         	modal.addClass('is-visible');
-      });  
-      
+      });
+
       e.preventDefault();
 
       // for old ie
       if (html.hasClass('oldie')) {
 
       	$(document).on('click', "#modal-close", function(evt) {
-	      	$('html,body').scrollTop(0); 
+	      	$('html,body').scrollTop(0);
 	      	modal.removeClass('is-visible');
-	      	setTimeout(function() {      
-	        		main.fadeIn(500); 
-	        	}, 500);       
-	        	        
+	      	setTimeout(function() {
+	        		main.fadeIn(500);
+	        	}, 500);
+
 	        	evt.preventDefault();
       	});
 
@@ -79,22 +79,22 @@
       else {
 
       	modClose.on('click', function(evt) {
-	      	$('html,body').scrollTop(0); 
+	      	$('html,body').scrollTop(0);
 	      	modal.removeClass('is-visible');
-	      	setTimeout(function() {      
-	        		main.fadeIn(500); 
-	        	}, 500);       
-	        	        
+	      	setTimeout(function() {
+	        		main.fadeIn(500);
+	        	}, 500);
+
 	        	evt.preventDefault();
 	      });
 
-      }     	
+      }
 
    });
 
    /*---------------------------------------------------- */
 	/* Owl Carousel
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
 	$("#owl-slider").owlCarousel({
         navigation: false,
         pagination: true,
@@ -152,31 +152,31 @@
 	/*---------------------------------------------------- */
 	/* Map
 	------------------------------------------------------ */
-	var latitude = 14.549072,
-		 longitude = 121.046958,
-		 map_zoom = 15,		 
+	var latitude = 41.3686431,
+		 longitude = -72.9208862,
+		 map_zoom = 15,
 		 main_color = '#d8ac00',
 		 saturation_value= -30,
 		 brightness_value= 5,
-		 winWidth = $(window).width();		 
+		 winWidth = $(window).width();
 
    // marker url
 	if ( winWidth > 480 ) {
-		marker_url = 'images/icon-location-b.png';                    
+		marker_url = 'images/icon-location-b.png';
    } else {
-      marker_url = 'images/icon-location.png';            
-   }	 
+      marker_url = 'images/icon-location.png';
+   }
 
 	// map style
-	var style = [ 
+	var style = [
 		{
 			// set saturation for the labels on the map
 			elementType: "labels",
 			stylers: [
 				{ saturation: saturation_value }
 			]
-		},  
-	   {	// poi stands for point of interest - don't show these lables on the map 
+		},
+	   {	// poi stands for point of interest - don't show these lables on the map
 			featureType: "poi",
 			elementType: "labels",
 			stylers: [
@@ -190,22 +190,22 @@
 	      stylers: [
 	         { visibility: "off" }
 	      ]
-	   }, 
-		{ 	
+	   },
+		{
 			// don't show local road lables on the map
-			featureType: "road.local", 
-			elementType: "labels.icon", 
-			stylers: [
-				{ visibility: "off" } 
-			] 
-		},
-		{ 
-			// don't show arterial road lables on the map
-			featureType: "road.arterial", 
-			elementType: "labels.icon", 
+			featureType: "road.local",
+			elementType: "labels.icon",
 			stylers: [
 				{ visibility: "off" }
-			] 
+			]
+		},
+		{
+			// don't show arterial road lables on the map
+			featureType: "road.arterial",
+			elementType: "labels.icon",
+			stylers: [
+				{ visibility: "off" }
+			]
 		},
 		{
 			// don't show road lables on the map
@@ -214,25 +214,25 @@
 			stylers: [
 				{ visibility: "off" }
 			]
-		}, 
+		},
 		// style different elements on the map
-		{ 
-			featureType: "transit", 
-			elementType: "geometry.fill", 
+		{
+			featureType: "transit",
+			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-		}, 
+		},
 		{
 			featureType: "poi",
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -241,8 +241,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -251,8 +251,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -261,8 +261,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -271,8 +271,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -281,8 +281,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -291,8 +291,8 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -300,19 +300,19 @@
 			featureType: "landscape",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-			
+
 		},
 		{
 			featureType: "road",
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		},
@@ -321,23 +321,23 @@
 			elementType: "geometry.fill",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
-		}, 
+		},
 		{
 			featureType: "water",
 			elementType: "geometry",
 			stylers: [
 				{ hue: main_color },
-				{ visibility: "on" }, 
-				{ lightness: brightness_value }, 
+				{ visibility: "on" },
+				{ lightness: brightness_value },
 				{ saturation: saturation_value }
 			]
 		}
 	];
-		
+
 	// map options
 	var map_options = {
 
@@ -356,20 +356,20 @@
    // inizialize the map
 	var map = new google.maps.Map(document.getElementById('map-container'), map_options);
 
-	// add a custom marker to the map				
+	// add a custom marker to the map
 	var marker = new google.maps.Marker({
 
 		 	position: new google.maps.LatLng(latitude, longitude),
 		 	map: map,
 		 	visible: true,
 		 	icon: marker_url
-		 
+
 		});
 
 	// add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
-	
-		// grap the zoom elements from the DOM and insert them in the map 
+
+		// grap the zoom elements from the DOM and insert them in the map
 	 	var controlUIzoomIn= document.getElementById('map-zoom-in'),
 		  	 controlUIzoomOut= document.getElementById('map-zoom-out');
 
@@ -383,14 +383,14 @@
 		google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
 			map.setZoom(map.getZoom()-1)
 		});
-			
+
 	}
 
 	var zoomControlDiv = document.createElement('div');
 	var zoomControl = new CustomZoomControl(zoomControlDiv, map);
 
 	// insert the zoom div on the top right of the map
-	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(zoomControlDiv);	
+	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(zoomControlDiv);
 
 
 
