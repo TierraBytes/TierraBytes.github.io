@@ -121,7 +121,15 @@ $("#angelA").click(function(){
 $("#abbA").click(function(){
   
 });
-
+$("angeloA").click(function(){
+	
+});
+$("mikeA").click(function(){
+	
+});
+$("nickA").click(function(){
+	
+});
 
 
 
