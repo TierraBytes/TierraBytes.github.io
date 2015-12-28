@@ -66,57 +66,105 @@
 
 	<center>
 	<h2 style=" padding-top:0.5em; " >Co-Owners/Lead Software Engineers.</h2><br/>
-		<div class="img" >			
-  				<a target="_blank" href="javascript::void(0)" id="angelA" >
+
+	<div id="activator" onclick="activate()">
+		<div class="img" id="angelA" >			
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/angel.jpeg" alt="Angel">
   				</a>
   			<div class="desc">Angel Sanchez?</div>
 		</div>
+	</div>
 		
-		<div class="img">
-  				<a target="_blank" href="javascript::void(0)" id="jasonA">
+	<div id="activator" onclick="activate()">
+		<div class="img" id="jasonA" id="jasonA">
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/jason.jpg" alt="Jason">
   				</a>
   			<div class="desc">Jason Azayev</div>
 		</div>
-	
-		<div class="img">
-  				<a target="_blank" href="javascript::void(0)" id="abbA">
+	</div>
+
+	<div id="activator" onclick="activate()">
+		<div class="img" id="abbA">
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/abb.jpg" alt="Abbi">
   				</a>
   			<div class="desc">Abhishek Gorti</div>
 		</div>
+	</div>
 		<br/>
-		
+	
+
 	<h2 style=" padding-top:20em; " >Lead Graphics Designer</h2><br/>
 		<br/>
-			<div class="img">
-  				<a target="_blank" href="javascript::void(0)" id="mikeA">
+		<div id="activator" onclick="activate()">
+			<div class="img" id="mikeA">
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/Logo.png" alt="logo">
   				</a>
   			<div class="desc">Michael Suhr (Pending)</div>
+			</div>
 		</div>
 		<br/>
+
 	<h2 style=" padding-top:10em;" >Lead Audio Designer</h2><br/>
+		
 		<br/>
-			<div class="img">
-  				<a target="_blank" href="javascript::void(0)" id="angeloA">
+		<div id="activator" onclick="activate()">
+			<div class="img" id="angeloA">
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/angelo.jpg" alt="Angelo">
   				</a>
   			<div class="desc">Angelo Esposito</div>
+			</div>
 		</div>
 		<br/>
 	<h2 style=" padding-top:15em"; >Software Engineers</h2><br/>
 			<br/>
-			<div class="img">
-  				<a target="_blank" href="javascript::void(0)" id="nickA">
+			<div id="activator" onclick="activate()">
+			<div class="img" id="nickA">
+  				<a target="_blank" href="javascript::void(0)" >
     				<img src="images/nick.jpg" alt="Nick">
   				</a>
   			<div class="desc">Nicolas McCabe (Pending)</div>
 		</div>
+		</div>
 	</center>
 	
 		
+	<!--
+		<div style="visibility: hidden;" id="overlay">
+			<div id="jasonOverlay">
+				<div id="close">X</div>
+				I am Jason
+			</div>
+		</div>
+
+		<div style="visibility: hidden;" id="overlay">
+			<div id="angelOverlay">
+				<div id="close">X</div>
+				I am Angel
+			</div>
+		</div>
+
+		<div style="visibility: hidden;" id="overlay">
+			<div id="abbyOverlay">
+				<div id="close">X</div>
+				I am Abby
+			</div>
+		</div> -->
+
+		
+		<div class="overlay" id="overlay" style="display:none;"></div>
+ 
+	<div class="box" id="box">
+		<a class="boxclose" id="boxclose">x</a>
+			<h1><div id="personName"></div></h1>
+				<p><div id="personInfo"></div></p>
+	</div>
+
+
 
 
 </div> <!-- end about page -->

@@ -110,28 +110,55 @@ $("#aboutPage, #programsPage, #atomPage, #contactPage").hide();
 
 
 
-
+var personName = document.getElementById("personName");
+var personInfo = document.getElementById("personInfo");
 
 $("#jasonA").click(function(){
-  
+    personName.innerHTML = " Jason " ;
+    personInfo.innerHTML = " I like to program a lot " ;
 });
 $("#angelA").click(function(){
-  
+    personName.innerHTML = " Angel " ;
+    personInfo.innerHTML = " I have a magical beard. " ;
 });
 $("#abbA").click(function(){
-  
+    personName.innerHTML = " Abby " ;
+    personInfo.innerHTML = " You can check me out at <a href='http://Gorti.me'> gorti.me </a> " ;
 });
 $("angeloA").click(function(){
-	
+   personName.innerHTML = " Angelo " ;
+    personInfo.innerHTML = " Nothing yet! " ;
 });
 $("mikeA").click(function(){
-	
+   personName.innerHTML = " Mike " ;
+    personInfo.innerHTML = " Nothing yet! " ;
 });
 $("nickA").click(function(){
-	
+   personName.innerHTML = " Nick " ;
+    personInfo.innerHTML = " Nothing yet! " ;
 });
 
 
+/*
+function overlay(element) {
+  el = document.getElementById(element);
+  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+}*/
+
+
+    function activate(){
+        $('#overlay').fadeIn(200,function(){
+            $('#box').animate({'top':'20px'},200);
+        });
+        return false;
+    };
+
+    $('#boxclose').click(function(){
+        $('#box').animate({'top':'-200px'},500,function(){
+            $('#overlay').fadeOut('fast');
+        });
+    });
+ 
 
 
 
