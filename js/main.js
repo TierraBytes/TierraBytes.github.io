@@ -125,15 +125,15 @@ $("#abbA").click(function(){
     personName.innerHTML = " Abby " ;
     personInfo.innerHTML = " You can check me out at <a href='http://Gorti.me'> gorti.me </a> " ;
 });
-$("angeloA").click(function(){
+$("#angeloA").click(function(){
    personName.innerHTML = " Angelo " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
-$("mikeA").click(function(){
+$("#mikeA").click(function(){
    personName.innerHTML = " Mike " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
-$("nickA").click(function(){
+$("#nickA").click(function(){
    personName.innerHTML = " Nick " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
