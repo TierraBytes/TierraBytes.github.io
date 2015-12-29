@@ -19,6 +19,7 @@ h2{
 	margin: 3px;
 }
 
+/*
 h1 {
   text-shadow: 0 1px 0 #9273A7,
                0 2px 0 #71657C,
@@ -33,7 +34,7 @@ h1 {
                0 10px 10px rgba(0,0,0,2),
                0 20px 20px rgba(0,0,0,15);
 }
-
+*/
 
 
 div.img {
@@ -51,7 +52,7 @@ div.img:hover {
 
 div.img img {
     width: 100%;
-    height: auto;
+    height: 350px;
 }
 div.desc {
     padding: 15px;
@@ -301,7 +302,7 @@ a.boxclose{
     margin:-20px -20px 0px -20px;
     padding:10px;
     background-color:#FFEFEF;
-    color:#EF7777;
+    color:purple;
     -moz-border-radius:20px 20px 0px 0px;
     -webkit-border-top-left-radius: 20px;
     -webkit-border-top-right-radius: 20px;

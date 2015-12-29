@@ -115,7 +115,7 @@ var personInfo = document.getElementById("personInfo");
 
 $("#jasonA").click(function(){
     personName.innerHTML = " Jason " ;
-    personInfo.innerHTML = " I like to program a lot " ;
+    personInfo.innerHTML = " I like to program a lot. " ;
 });
 $("#angelA").click(function(){
     personName.innerHTML = " Angel " ;
@@ -135,6 +135,10 @@ $("#mikeA").click(function(){
 });
 $("#nickA").click(function(){
    personName.innerHTML = " Nick " ;
+    personInfo.innerHTML = " Nothing yet! " ;
+});
+$("#garyA").click(function(){
+   personName.innerHTML = " Gary " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
 
