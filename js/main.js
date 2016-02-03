@@ -122,7 +122,7 @@ $("#angelA").click(function(){
     personInfo.innerHTML = " I have a magical beard. " ;
 });
 $("#abbA").click(function(){
-    personName.innerHTML = " Abby " ;
+    personName.innerHTML = " Abhishek Gorti " ;
     personInfo.innerHTML = " You can check me out at <a href='http://Gorti.me'> gorti.me </a> " ;
 });
 $("#angeloA").click(function(){
