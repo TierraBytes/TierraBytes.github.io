@@ -114,19 +114,19 @@ var personName = document.getElementById("personName");
 var personInfo = document.getElementById("personInfo");
 
 $("#jasonA").click(function(){
-    personName.innerHTML = " Jason " ;
+    personName.innerHTML = " PredatorFeesh " ;
     personInfo.innerHTML = " I like to program a lot. " ;
 });
 $("#angelA").click(function(){
-    personName.innerHTML = " Angel " ;
+    personName.innerHTML = " ShadowFiendZX " ;
     personInfo.innerHTML = " I have a magical beard. " ;
 });
 $("#abbA").click(function(){
-    personName.innerHTML = " Abhishek Gorti " ;
-    personInfo.innerHTML = " You can check me out at <a href='http://Gorti.me'> gorti.me </a> " ;
+    personName.innerHTML = " Waco001 " ;
+    personInfo.innerHTML = " You can check me out at <a href='http://Gorti.me'> Gorti.me </a> " ;
 });
 $("#angeloA").click(function(){
-   personName.innerHTML = " Angelo " ;
+   personName.innerHTML = " LagSwitch " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
 $("#mikeA").click(function(){
@@ -134,11 +134,11 @@ $("#mikeA").click(function(){
     personInfo.innerHTML = " Nothing yet! " ;
 });
 $("#nickA").click(function(){
-   personName.innerHTML = " Nick " ;
+   personName.innerHTML = " MinutesPerBeat " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
 $("#garyA").click(function(){
-   personName.innerHTML = " Gary " ;
+   personName.innerHTML = " RedLiteNinja " ;
     personInfo.innerHTML = " Nothing yet! " ;
 });
 
