@@ -119,7 +119,8 @@ $("#jasonA").click(function(){
 });
 $("#angelA").click(function(){
     personName.innerHTML = " ShadowFiendZX " ;
-    personInfo.innerHTML = " I have a magical beard. <br> I love to hange out with my dog, Solomon. <br> <img src='images/solomon.jpg' alt='Solomon' style='width:960px;height:540px;'> " ;
+    personInfo.innerHTML = " I have a magical beard. " ;
+    /* <br> I love to hange out with my dog, Solomon. <br> <img src='images/solomon.jpg' alt='Solomon' style='width:960px;height:540px;'>*/
 });
 $("#abbA").click(function(){
     personName.innerHTML = " Waco001 " ;
