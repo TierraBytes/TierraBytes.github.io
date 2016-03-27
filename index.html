@@ -1,240 +1,98 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<link rel="shortcut icon" href="TabIcon.png" >
-<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="icon" href="TabIcon.png">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<style>
+		#pageContentHolder{
+			text-align: center;
+		}
+		#timer{
+			font-size:25px;
+			padding-right: 2em;
+			display:inline-block;
+			border: 2px dotted black;
+		}
 
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
 
-<link rel="stylesheet" type="test/css" href="css/main.css"/>
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #555;
+	display: inline-block;
+}
 
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #abc;
+	display: inline-block;
+}
 
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
 
+	</style>
 </head>
 <body>
 
-<center>
+<p style="color:#999999; font:8em montserrat-regular;, sans-serif; margin: 2px; padding-top:0.1em; background: rgba(0,0,0,0.3);height: 80px;">Tierra Bytes</p>    
+	<div id="menu">
+		<ul class="menu">
+			<li class="selected" selected><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="signup.html">Sign up/in</a></li>
 
-<p style="color:#999999; font:8em montserrat-regular;, sans-serif; margin: 2px; padding-top:0.1em;">Tierra Bytes</p>
-
- 
-
-								<ul id="menu">
-								<div class="fixercontainer">
-    <li><a href="javascript:void(0)" id="homeButton" onclick="toHome()" >Home</a></li>
-    <li>
-        <a href="javascript:void(0)" id="programsButton" onClick="toPrograms()">Programs</a>
-        <ul>
-            <li><a href="javascript:void(0)" id="atomPageButton" onClick="toAtom()">Atom for AndroidWear</a></li>
-        </ul>
-    </li>
-    <li><a href="javascript:void(0)" id="aboutPageButton" onClick="toAbout()">About</a></li>
-    <li><a href="javascript:void(0)" id="contactButton" onClick="toContact()">Contact</a></li>
-    </div>
-</ul>
-<br/>
-</center>
-
-
-
-<div id='home' >
-	<center>
+		</ul>
+	</div>
 	
-								<h2 style=" padding-top:0.5em; " >During the winter of 2015, 3 dudes and their laptops made some cool stuff.</h2><br/>
-								<h2>Now they're back.</h2><br/>
-								<h2 style = "padding-bottom: 1em ;">What we're working on:</h2>
-								<hr width="30%">
+	<div id="pageContentHolder"> <!-- Main model -->
 
-								<h1><a onclick="toAtom()">Click me to view our atom project!</a></h1>
-	</dir>
-
-
-	<br/><br/><br/>
-	
-
-	</center>
-</div><!-- End home-->
-
-
-
-
-
-
-
-
-<div id="aboutPage" style="">
-
-	<center>
-	<h2 style=" padding-top:0.5em; " >Co-Owners/Lead Software Engineers.</h2><br/>
-
-	<div id="activator" onclick="activate()">
-		<div class="img" id="angelA" >			
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/angel.jpeg" alt="Angel">
-  				</a>
-  			<div class="desc">Angel Sanchez?</div>
+				<h2>How long until TierraBytes day(10/24/2016)?</h2><br/>
+			<div id="clockdiv">
+		  <div>
+		    <span class="days"></span>
+		    <div class="smalltext">Days</div>
+		  </div>
+		  <div>
+		    <span class="hours"></span>
+		    <div class="smalltext">Hours</div>
+		  </div>
+		  <div>
+		    <span class="minutes"></span>
+		    <div class="smalltext">Minutes</div>
+		  </div>
+		  <div>
+		    <span class="seconds"></span>
+		    <div class="smalltext">Seconds</div>
+		  </div>
 		</div>
-	</div>
-		
-	<div id="activator" onclick="activate()">
-		<div class="img" id="jasonA" id="jasonA" >
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/jason.jpg" width="5" alt="Jason">
-  				</a>
-  			<div class="desc">Jason Azayev</div>
-		</div>
-	</div>
-
-	<div id="activator" onclick="activate()">
-		<div class="img" id="abbA">
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/abb.jpg" alt="Abbi">
-  				</a>
-  			<div class="desc">Abhishek Gorti</div>
-		</div>
-	</div>
-		<br/><br/>
-	
-
-	<h2 style=" padding-top:20em; " >Lead Graphics Designer</h2><br/>
-		<p>To be determined!</p>
-
-	<h2 style=" padding-top:10em;" >Lead Sound Designer</h2><br/>
-		<br/><br/>
-
-		<div id="activator" onclick="activate()">
-			<div class="img" id="angeloA">
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/angelo.jpg" alt="Angelo">
-  				</a>
-  			<div class="desc">Angelo Esposito</div>
-			</div>
-		</div>
-		
-
-		<br/><br/>
 
 
-
-	<h2 style=" padding-top:15em"; >Software Engineers</h2><br/>
-		
-
-
-			<br/><br/>
-	<div id="activator" onclick="activate()">
-			<div class="img" id="nickA">
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/nick.jpg" alt="Nick">
-  				</a>
-  			<div class="desc">Nicolas McCabe (Pending)</div>
-		</div>
-	</div>
-
-	<br><br/>
-
-
-
-	<h2 style=" padding-top:15em"; >Sound Designer</h2><br/>
-
-	<div id="activator" onclick="activate()">
-			<div class="img" id="garyA">
-  				<a target="_blank" href="javascript::void(0)" >
-    				<img src="images/gary.jpg" alt="Gary">
-  				</a>
-  			<div class="desc">Gary Nieves</div>
-		</div>
 	</div>
 
 
-	</center>
-	
-		
-	<!--
-		<div style="visibility: hidden;" id="overlay">
-			<div id="jasonOverlay">
-				<div id="close">X</div>
-				I am Jason
-			</div>
-		</div>
-
-		<div style="visibility: hidden;" id="overlay">
-			<div id="angelOverlay">
-				<div id="close">X</div>
-				I am Angel
-			</div>
-		</div>
-
-		<div style="visibility: hidden;" id="overlay">
-			<div id="abbyOverlay">
-				<div id="close">X</div>
-				I am Abby
-			</div>
-		</div> -->
-
-		
-		<div class="overlay" id="overlay" style="display:none;"></div>
- 
-	<div class="box" id="box">
-		<a class="boxclose" id="boxclose">x</a>
-			<h1><div id="personName"></div></h1>
-				<p><div id="personInfo"></div></p>
-	</div>
-
-
-
-
-</div> <!-- end about page -->
-
-
-
-<div id="programsPage" style="">
-
-	<a onclick="toAtom()"><h2>Click to view our current project in the process: The Atom (Watch Face) </h2></a>
-
-</div><!-- end programs page -->
-
-
-
-
-<div id="atomPage" style="">
-
-<center> <p>A stylish, sciency way to tell time and date on your Android Wear.</p></center>
-
-	<center><dir id='field' style="">
-				<b><h1 style="color:#9273A7; font: 50px 'montserrat-regular', sans-serif;"> <div id="ball" style="10%">A</div>TOM</h1></b>
-	</dir></center>
-
-</div><!-- end atom page -->
-
-
-
-<div id="contactPage" style="">
-	<h2>Coming soon!</h2>
-</div><!-- end contact page -->
-
-
-
-
-
-	
-
-
-
-
-
-<script type="text/javascript">
-    $(function() {
-      if ($.browser.msie && $.browser.version.substr(0,1)<7)
-      {
-        $('li').has('ul').mouseover(function(){
-            $(this).children('ul').show();
-            }).mouseout(function(){
-            $(this).children('ul').hide();
-            })
-      }
-    });        
-</script> <!-- MAKE SURE THAT THE MENU WORKS DESPITE BROWSER -->
+    <p id="spinner" class="loading">Please wait while we do what we do best.</p>
+    
+    
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/sessvars.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    //sessvars.myObj = {color:100}
+	</script>
 
 </body>
-<script type="text/javascript" src="js/main.js"></script>
 </html>
