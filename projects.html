@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/projects.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<style type="text/css">
+
+h2{
+
+}
+
+ATOM{
+	font-size: 1em ;
+	color:white;
+}
+ATOM a{
+	color:hotpink;
+}
+h2.TITLE{
+	color:darkgrey;
+	margin : 10px;
+	font-size : 3em;
+	 border-radius: 25px;
+    background: rgba(200,200,200,0.5);
+    padding: 20px; 
+}
+h2.TITLE:hover{
+	color: black;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+#games p {
+	color:black;
+	padding :10px;
+	font-size : 2em;
+}
+#mcmods p{
+	color:black;
+	padding:10px;
+	font-size : 2em;
+}
+#androidWearFaces p{
+	color:black;
+	padding: 10px;
+	font-size : 2em;
+}
+
+</style>
+</head>
+<body>
+
+<p style="color:#999999; font:8em montserrat-regular;, sans-serif; margin: 2px; padding-top:0.1em; background: rgba(0,0,0,0.3);height: 80px;">Tierra Bytes</p>
+	<div id="menu">
+		<ul class="menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li  class="selected" selected><a  class="selected" selected href="projects.html">Projects</a></li>
+			
+			<li><a href="signup.html">Sign up/in</a></li>
+		</ul>
+	</div>
+	
+	<div id="pageContentHolder"> <!-- Main model -->
+
+
+
+
+
+	<!--<h2 id="openScience" class="TITLE">Science</h2>
+		<div style="display:none" id="science">
+			Nothing here yet! To check out some projects we are developing, check out github: <a href="https://github.com/PredatorFeesh?tab=repositories">PredatorFeesh</a>
+		</div>-->
+
+	<h2 id="openGames" class="TITLE">Games</h2>
+		<div style="display:none" id="games">
+			<p>Currently working on some games!</p>
+		</div>
+
+	<h2 id="openMcMods" class="TITLE">Minecraft Mods</h2>
+		<div style="display:none" id="mcmods">
+			<mcscience><p>SPB-Science<p></mcscience>
+			<mcscience><p>SPB-Magic</p></mcscience>
+			
+		</div>
+
+	<h2 id="openAndroidWearFaces" class="TITLE">Android Wear Faces</h2>
+		<div style="display:none" id="androidWearFaces">
+			<ATOM><p> <a href="atom.html"> ATOM </a> </p></ATOM>
+			<ATOM><p>SPLIT</p></ATOM>
+		</div>
+
+
+	</div>
+
+	 <p id="spinner" class="loading">Please wait while we do what we do best.</p>
+
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/sessvars.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	//$("#openScience").click(function(){
+	//	$("#science").toggle("slow");
+	//});
+	$("#openGames").click(function(){
+		$("#games").toggle("slow");
+	});
+	$("#openMcMods").click(function(){
+		$("#mcmods").toggle("slow");
+	});
+	$("#openAndroidWearFaces").click(function(){
+		$("#androidWearFaces").toggle("slow");
+	});
+</script>
+</body>
+</html>

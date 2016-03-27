@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/*html{
+	background: #161415 url(../images/background.jpg) no-repeat center center fixed;
+-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	background-size: cover !important;}*/
+body{
+	background: #384047;
+}
+#menu {
+	background: rgba(0,0,0,0.3);
+	height: 60px;
+	padding: 0 5px 0;
+	text-align: center;
+}
+
+ul.menu {
+	list-style: none;
+}
+
+ul.menu li {
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+ul.menu li:hover { 
+	background-color:#aaaaaa;
+}
+
+ul.menu li a {
+	color: #fff;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+ul.menu li.selected {
+	background: #fff;
+}
+
+ul.menu li.selected a {
+	color: #384047;
+}
+
+select {
+	width: 94%;
+	margin: 11px  0 11px 2%;
+	float: left;
+	border: 1px solid black;
+	overflow:hidden;
+	height: 50%;
+}
+
+h1 {
+	margin: 40px 0 10px;
+	text-align: center;
+	color: #384047;
+}
+p {
+	text-align: center;
+	/*color: #777;*/
+}
+/** @media **/
+@media (min-width: 320px) and (max-width: 568px){
+	#menu ul{
+		display:none;
+	}
+}
+@media (min-width: 568px){
+	#menu select, #menu button{
+		display: none;
+	}
+}
+
+
+body {
+  /*background: #384047;*/
+  font-family: sans-serif;
+  font-size: 10px
+}
+
+@media (min-width: 610px){
+ /*#pageContentHolder{
+  background: rgba(190,190,190,0.7) ;
+  padding: 2em 2em 2em;
+  max-width: 700px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 5px;
+
+	}*/
+}
+
+@media (max-width: 610px){
+	#pageContentHolder{
+		margin: 50px auto;
+	}
+}
+#pageContentHolder{
+    display:none;
+    margin-bottom:1em;
+  	max-width: 400px;
+  	margin: 20px auto 0;
+}
+
+
+
+
+
+#spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	height: 200px;
+	width: 200px;
+	text-indent: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-mask-image: url(../images/spinner.png);
+	background-image: url("../images/spinner.png");
+	/*background-color: #000;*/
+	-webkit-animation-name: spinnerRotate;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinnerRotate {
+	from {
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
