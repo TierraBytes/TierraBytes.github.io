@@ -41,6 +41,11 @@ var clicked;
 			clicked.attr("class","selected");
 			clicked.show("fast");
 
+		}else if(who=="nick"){
+			clicked = $("div#nickClicked");
+			clicked.attr("class","selected");
+			clicked.show("fast");
+
 		}
 
 	});
