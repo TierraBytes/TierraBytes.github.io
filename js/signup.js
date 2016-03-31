@@ -107,6 +107,14 @@ $("#email").focus(emailEvent).keyup(emailEvent).focus(confirmEmailEvent).keyup(c
 $("#confirm_email").focus(confirmEmailEvent).keyup(confirmEmailEvent).keyup(enableSubmitEvent).focus(enableSubmitEvent).blur(enableSubmitEvent);
 $("#email").focus(enableSubmitEvent).blur(enableSubmitEvent).keyup(enableSubmitEvent);
 $("#confirm_email").focus(enableSubmitEvent).blur(enableSubmitEvent).keyup(enableSubmitEvent);
+
+$("#email").keyup(enablePasswordEvent).blur(enablePasswordEvent);
+$("#confirm_email").keyup(enablePasswordEvent).blur(enablePasswordEvent);
+$("#email").keyup(enablePasswordEvent).blur(enablePasswordEvent);
+$("#confirm_email").keyup(enablePasswordEvent).blur(enablePasswordEvent);
+
+$("#username").keyup(enablePasswordEvent).blur(enablePasswordEvent).focus(enablePasswordEvent);
+
 enableSubmitEvent();
 
 
