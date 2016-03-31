@@ -21,15 +21,24 @@ var confirmPasswordEvent = function(){
 }
 
 var isUsernameFilled = function(){
-	return $("#username").length > 0;
+	return $("#username").val().length > 0;
 }
 var isPasswordValid = function(){
-	return $("#password").val() > 8;
+	return $("#password").val().length > 8;
 }
 var arePasswordsMatching = function(){
-	return $("#password").val() === $("#confirm_password").val();
+    var password = $("#password").val();
+    var confirmPassword = $("#confirm_password").val();
+	if(password === confirmPassword)
+	{
+		//console.log("swag " + "\"" + password+ "\"" + "\"" + confirmPassword + "\"");
+		//console.log(isPasswordValid());
+		//console.log(isUsernameFilled() + " \"" + $("#username").val() + "\"" );
+	}
+	return password === confirmPassword;
 }
 var canSubmit = function(){
+		//console.log("\"" + $("#password").val()  + "\"" + " "  +  "\"" + $("#confirm_password").val() +  "\"" );
 	return arePasswordsMatching() && isPasswordValid() && isUsernameFilled() ;
 }
 var enableSubmitEvent = function(){
@@ -54,7 +63,7 @@ enableSubmitEvent();
 
 $("#submit").click(function(){
 	event.preventDefault();
-
+	window.location.replace('https://www.facebook.com');
 });
 
 
