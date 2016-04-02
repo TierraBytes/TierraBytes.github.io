@@ -4,32 +4,72 @@
 var turnedOn = false;
 var start = null;
 var progress=0;
-    var c = 70;
-    var inc = true;
-    var min = 40;
-    var max = 120;
+	
+	var r = 0;
+	var g = 19;
+	var b = 127;
+	
+	var incR = true;
+	var incG = true;
+	var incB = true;
+	
+	var minR = 0;
+	var minG = 0;
+	var minB = 50;
+	
+	var maxR = 10;
+	var maxG = 40;
+	var maxB = 170;
 
   var animateScreen = function(timestamp){
-    if (turnedOn) {
-    if(!start) start=timestamp;
-    progress = timestamp -start;
+    if (turnedOn)
+		{
+			if(!start) start=timestamp;
+			progress = timestamp -start;
 
-   if(progress % 50 < 50 && progress % 50 > 40)
-     console.log(progress%50);
+			if(progress % 50 < 50 && progress % 50 > 40)
+			console.log(progress%50);
 
-    $("body").css("background-color", " rgba("+c % (max + 1) +","+c%(max+1)+","+c%(max+1)+",1) ");
+			$("body").css("background-color", " rgba("+r % (maxR + 1) +","+g%(maxG+1)+","+b%(maxB+1)+",1) ");
 
-      if(c>=max) inc=false;
-      else if(c<=min) inc=true;
-      if(inc){
-      c++;
-    }else if(!inc){
-     c--;
-    }
+			if(r>=maxR) incR=false;
+			else if(r<=minR) incR=true;
+	  
+			if(g>=maxG) incG=false;
+			else if(g<=minG) incG=true;
+	  
+			if(b>=maxB) incB=false;
+			else if(b<=minB) incB=true;
+	  
+			if(incR)
+			{
+				r++;
+			}
+			else if(!incR)
+			{
+				r--;
+			}
+	
+			if(incG)
+			{
+				g++;
+			}
+			else if(!incG)
+			{
+				g--;
+			}
+	
+			if(incB)
+			{
+				b++;
+			}
+			else if(!incB)
+			{
+				b--;
+			}
        
-
-
-  }else{
+	   }
+  else{
 
   }
     window.requestAnimationFrame(animateScreen);
